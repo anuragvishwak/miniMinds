@@ -19,18 +19,18 @@ function LandingPage() {
       <Navbar />
 
       <div>
-        <div className="flex items-center py-10 px-14 bg-gradient-to-r from-white to-[#fcf9f6]">
+        <div className="flex items-center py-10 px-8 sm:px-14 bg-gradient-to-r from-white to-[#fcf9f6]">
           <div className="">
-            <p className="font-bold text-[#333333] text-8xl">
+            <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
               Grow your Business
             </p>
             <div className="flex items-center">
-              <p className="font-bold text-[#333333] text-8xl">with</p>
-              <p className="font-bold ml-6 text-[#e4b18c] text-8xl">
+              <p className="font-bold text-[#333333] text-2xl sm:text-7xl">with</p>
+              <p className="font-bold ml-6 text-[#e4b18c] text-2xl sm:text-8xl">
                 Mini Minds
               </p>
             </div>
-            <p className="text-[#333333] mb-7 mt-14 text-justify text-lg w-7/12">
+            <p className="text-[#333333] mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-justify sm:text-lg sm:w-7/12">
               Comprehensive marketing solutions that combine photography,
               videography, branding, and social media management to boost your
               brand, engage your audience, and deliver impactful results.
@@ -52,28 +52,28 @@ function LandingPage() {
             </div>
           </div>
 
-          <div>
+          <div className="sm:block hidden">
             <img src={img2} className="h-[600px] w-[770px]" />
           </div>
         </div>
 
-        <div className="px-10 py-28">
+        <div className="px-10 py-10 sm:py-28">
           <div className="text-center">
            <div className="flex justify-center items-center">
-           <p className="text-[#333333] text-5xl font-bold">
+           <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
               Elevate Your 
             </p>
-            <p className="text-[#e4b18c] ml-3 text-5xl font-bold">Brand</p>
+            <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">Brand</p>
            </div>
             
-            <p className="text-[#333333]  my-8 text-lg font-dmSans ">
+            <p className="text-[#333333] my-4 sm:my-8 text-lg font-dmSans ">
               We are a dynamic, full-service marketing company that thrives on
               delivering innovative solutions tailored to your brand's unique
               needs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 text-[#333333] gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-[#333333] gap-5">
             <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
               <div className="flex h-20 text-[#333333] justify-center">
                 <MdPhotoCamera
