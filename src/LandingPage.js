@@ -11,6 +11,7 @@ import {
 import { MdFacebook, MdPhotoCamera } from "react-icons/md";
 import { IoVideocam } from "react-icons/io5";
 import { PiFilmSlate } from "react-icons/pi";
+import Footer from "./Footer";
 
 function LandingPage() {
   return (
@@ -58,9 +59,13 @@ function LandingPage() {
 
         <div className="px-10 py-28">
           <div className="text-center">
-            <p className="text-[#333333] text-5xl font-bold">
-              Elevate Your Brand
+           <div className="flex justify-center items-center">
+           <p className="text-[#333333] text-5xl font-bold">
+              Elevate Your 
             </p>
+            <p className="text-[#e4b18c] ml-3 text-5xl font-bold">Brand</p>
+           </div>
+            
             <p className="text-[#333333]  my-8 text-lg font-dmSans ">
               We are a dynamic, full-service marketing company that thrives on
               delivering innovative solutions tailored to your brand's unique
@@ -70,7 +75,7 @@ function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 text-[#333333] gap-5">
             <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
-              <div className="flex text-[#333333] justify-center">
+              <div className="flex h-20 text-[#333333] justify-center">
                 <MdPhotoCamera
                   size={70}
                   className="bg-red-500 p-2 rounded-l-full text-white"
@@ -80,42 +85,29 @@ function LandingPage() {
                   className="bg-blue-500 p-2 rounded-r-full text-white"
                 />
               </div>
-              <p className=" font-bold mt-3 text-xl">
+              <p className=" font-bold text-[#333333] mt-3 text-xl">
                 Photography / Videography
               </p>
-              <p className="w-auto text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We
-                specialize in creating visuals that bring your brand to life.
-                Through expert photography and videography, we capture the
-                essence of your business—from stunning product shots and
-                lifestyle imagery to compelling brand films and social media
-                clips. Let’s craft visuals that captivate, inspire, and leave a
-                lasting impression.
+              <p className="w-auto text-sm text-justify">
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We specialize in creating visuals that bring your brand to life, from product shots to brand films and social media clips. Let’s craft visuals that captivate and leave a lasting impression.
               </p>
             </div>
 
             <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
-              <div className="flex justify-center">
+              <div className="flex h-20 justify-center">
                 <PiFilmSlate
                   className="bg-purple-500 p-2 rounded-full text-white"
                   size={70}
                 />
               </div>
               <p className=" font-bold mt-3 text-xl">Content Creation</p>
-              <p className="w-auto text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, we
-                transform your ideas into impactful content that resonates with
-                your audience. From creating eye-catching visuals to writing
-                compelling copy, we design content strategies that engage,
-                inform, and inspire. Our goal is to help you build a strong
-                online presence that leaves a lasting impression. Let’s bring
-                your brand’s story to life and create content that sparks
-                conversation.
+              <p className="w-auto text-sm text-justify">
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We turn your ideas into engaging content that builds a strong online presence and sparks conversation. Let’s bring your brand’s story to life.
               </p>
             </div>
 
             <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
-              <div className="flex justify-center">
+              <div className="flex h-20 justify-center">
                 <div className="grid gap-2 grid-cols-2">
                   <MdFacebook
                     className="bg-blue-500 text-white p-1 rounded"
@@ -136,34 +128,26 @@ function LandingPage() {
                 </div>
               </div>
               <p className=" font-bold mt-3 text-xl">Social Media Managing</p>
-              <p className="w-auto text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, we
-                turn your vision into a powerful social media presence. From
-                crafting engaging content to managing campaigns, we create
-                strategies that captivate, inspire, and drive results. Let’s
-                make your brand unforgettable online.
+              <p className="w-auto text-sm text-justify">
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We turn your vision into a powerful social media presence with engaging content and effective campaigns that drive results. Let’s make your brand unforgettable online.
               </p>
             </div>
 
             <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
-              <div className="flex justify-center">
-                <p className="text-5xl bg-yellow-500 text-white py-3 px-5 rounded-full font-bold">
+              <div className="flex h-20 justify-center">
+                <p className="text-5xl bg-yellow-500 text-white py-3 px-7 rounded-full font-bold">
                   B
                 </p>
               </div>
               <p className=" font-bold mt-3 text-xl">Branding</p>
-              <p className="w-auto text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, we
-                turn your vision into a powerful brand identity. From crafting
-                unique logos to defining your voice, we create designs and
-                strategies that captivate, inspire, and leave a lasting
-                impression. Let’s build a brand that stands out and tells your
-                story.
+              <p className="w-auto text-sm text-justify">
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We turn your vision into a standout brand with unique designs and strategies that leave a lasting impression.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
