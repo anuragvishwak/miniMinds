@@ -43,7 +43,7 @@ function ContactUs() {
               </div>
             </div>
 
-            <div className="flex bg-white w-96 border-[#333333] border p-5 items-center">
+            <div className="flex bg-white w-96 sm:w-auto border-[#333333] border p-5 items-center">
               <IoLocationSharp size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Address</p>
