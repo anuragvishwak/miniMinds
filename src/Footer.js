@@ -33,25 +33,35 @@ function Footer() {
           <p className="ml-1">Near Phoenix mall , Kurla West Mumbai 400071</p>
         </div>
         <div className="text-[#e4b18c] flex items-center">
-          <MdPhone className="text-[#e4b18c] mr-1" />
-          <p>+91 9967784839</p>
+        <a href="tel:+919967784839" className="flex items-center">
+            <MdPhone className="text-[#e4b18c] mr-1" />
+            <p>+91 9967784839</p>
+          </a>
         </div>
 
         <div className="text-[#e4b18c] flex items-center">
-          <GoMail className="text-[#e4b18c] mr-1" />
-          <p>rjsminiminds@gmail.com</p>
+        <a href="mailto:rjsminiminds@gmail.com" className="flex items-center">
+            <GoMail className="text-[#e4b18c] mr-1" />
+            <p>rjsminiminds@gmail.com</p>
+          </a>
         </div>
       </div>
 
       <div className="text-[#e4b18c] border-t py-3 border-[#e4b18c] flex justify-end">
         <button>
+        <a href="https://www.instagram.com/miniminds__?igsh=dHp2aWpkcWZpbDAy" target="_blank" rel="noopener noreferrer">
           <PiInstagramLogo size={30} />
+        </a>
         </button>
         <button className="mx-3">
-          <MdFacebook size={30} />
+        <a href="https://www.facebook.com/people/Mini-Minds/pfbid0it1uNUXb6FpGm6QQGCoofnhs6mgp3w3iDnM2zCwbGqvrkMaR6ra5Uct19nkwsQ9dl/?ref=ig_profile_ac" target="_blank" rel="noopener noreferrer">
+          <MdFacebook size={30} className="mx-3" />
+        </a>
         </button>
         <button>
+        <a href="https://www.youtube.com/@miniminds14?si=bT9uYWi-foXRGKgP" target="_blank" rel="noopener noreferrer">
           <PiYoutubeLogo size={30} />
+        </a>
         </button>
       </div>
      
