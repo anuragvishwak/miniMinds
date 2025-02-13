@@ -12,6 +12,7 @@ import { MdFacebook, MdPhotoCamera } from "react-icons/md";
 import { IoVideocam } from "react-icons/io5";
 import { PiFilmSlate } from "react-icons/pi";
 import Footer from "./Footer";
+import BrandsServed from "./BrandsServed";
 
 function LandingPage() {
   return (
@@ -25,7 +26,9 @@ function LandingPage() {
               Grow your Business
             </p>
             <div className="flex items-center">
-              <p className="font-bold text-[#333333] text-2xl sm:text-7xl">with</p>
+              <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
+                with
+              </p>
               <p className="font-bold ml-6 text-[#e4b18c] text-2xl sm:text-8xl">
                 Mini Minds
               </p>
@@ -59,13 +62,15 @@ function LandingPage() {
 
         <div className="px-10 py-10 sm:py-28">
           <div className="text-center">
-           <div className="flex justify-center items-center">
-           <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
-              Elevate Your 
-            </p>
-            <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">Brand</p>
-           </div>
-            
+            <div className="flex justify-center items-center">
+              <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
+                Elevate Your
+              </p>
+              <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
+                Brand
+              </p>
+            </div>
+
             <p className="text-[#333333] my-4 sm:my-8 text-lg font-dmSans ">
               We are a dynamic, full-service marketing company that thrives on
               delivering innovative solutions tailored to your brand's unique
@@ -89,7 +94,10 @@ function LandingPage() {
                 Photography / Videography
               </p>
               <p className="w-auto text-sm text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We specialize in creating visuals that bring your brand to life, from product shots to brand films and social media clips. Let’s craft visuals that captivate and leave a lasting impression.
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We
+                specialize in creating visuals that bring your brand to life,
+                from product shots to brand films and social media clips. Let’s
+                craft visuals that captivate and leave a lasting impression.
               </p>
             </div>
 
@@ -102,7 +110,10 @@ function LandingPage() {
               </div>
               <p className=" font-bold mt-3 text-xl">Content Creation</p>
               <p className="w-auto text-sm text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We turn your ideas into engaging content that builds a strong online presence and sparks conversation. Let’s bring your brand’s story to life.
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We
+                turn your ideas into engaging content that builds a strong
+                online presence and sparks conversation. Let’s bring your
+                brand’s story to life.
               </p>
             </div>
 
@@ -129,7 +140,10 @@ function LandingPage() {
               </div>
               <p className=" font-bold mt-3 text-xl">Social Media Managing</p>
               <p className="w-auto text-sm text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We turn your vision into a powerful social media presence with engaging content and effective campaigns that drive results. Let’s make your brand unforgettable online.
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We
+                turn your vision into a powerful social media presence with
+                engaging content and effective campaigns that drive results.
+                Let’s make your brand unforgettable online.
               </p>
             </div>
 
@@ -141,13 +155,35 @@ function LandingPage() {
               </div>
               <p className=" font-bold mt-3 text-xl">Branding</p>
               <p className="w-auto text-sm text-justify">
-                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We turn your vision into a standout brand with unique designs and strategies that leave a lasting impression.
+                At <strong style={{ color: "#e4b18c" }}>Mini Minds</strong>, We
+                turn your vision into a standout brand with unique designs and
+                strategies that leave a lasting impression.
               </p>
             </div>
           </div>
         </div>
+
+        <div>
+          <div className="flex justify-center items-center ">
+            <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
+              Brands we
+            </p>
+            <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
+              Served
+            </p>
+          </div>
+          <p className="text-[#333333] text-center text-lg font-dmSans">
+            Empowering Brands, Amplifying Success: Testimonials from the Brands
+            We’ve Served
+          </p>
+          <BrandsServed />
+        </div>
+
+        <div>
+          
+        </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

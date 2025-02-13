@@ -25,13 +25,12 @@ function Footer() {
       </div>
 
       <div className="mb-3">
-        <p className="text-[#e4b18c] font-semibold font-dmSans text-xl">    
-        Contact Us
+        <p className="text-[#e4b18c] font-semibold font-dmSans text-xl">
+          Contact Us
         </p>
         <div className="text-[#e4b18c] flex items-center">
           <GoLocation className="text-[#e4b18c]" />
-          <p className="ml-1">Near Phoenix mall , Kurla West 
-          Mumbai 400071</p>
+          <p className="ml-1">Near Phoenix mall , Kurla West Mumbai 400071</p>
         </div>
         <div className="text-[#e4b18c] flex items-center">
           <MdPhone className="text-[#e4b18c] mr-1" />
@@ -39,7 +38,7 @@ function Footer() {
         </div>
 
         <div className="text-[#e4b18c] flex items-center">
-            <GoMail className="text-[#e4b18c] mr-1" />
+          <GoMail className="text-[#e4b18c] mr-1" />
           <p>rjsminiminds@gmail.com</p>
         </div>
       </div>
@@ -55,6 +54,7 @@ function Footer() {
           <PiYoutubeLogo size={30} />
         </button>
       </div>
+     
     </div>
   );
 }

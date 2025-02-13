@@ -1,0 +1,25 @@
+/* This ensures each carousel slide displays 4 images */
+.carousel .slide {
+    display: flex;
+    justify-content: space-between; /* Space between each image */
+    align-items: center; /* Center images vertically */
+    padding: 10px; /* Padding around images */
+  }
+  
+  .carousel .carousel-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel .carousel-image {
+    width: 100%; /* Adjust image size within each carousel item */
+    max-width: 150px; /* Adjust size of individual images */
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  .carousel .carousel-status {
+    display: none; /* Hide the slide status */
+  }
+  
