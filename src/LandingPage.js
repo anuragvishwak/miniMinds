@@ -22,10 +22,12 @@ function LandingPage() {
       <div>
         <div className="flex items-center py-10 px-8 sm:px-14 bg-gradient-to-r from-white to-[#fcf9f6]">
           <div className="">
-            <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
+         <div className="flex ">
+          <div>
+          <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
               Grow your Business
             </p>
-            <div className="flex items-center">
+         <div className="flex items-center">
               <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
                 with
               </p>
@@ -33,6 +35,10 @@ function LandingPage() {
                 Mini Minds
               </p>
             </div>
+          </div>
+            <img src={img2} className="sm:hidden h-24 w-24 ml-5" />
+         </div>
+
             <p className="text-[#333333] mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-justify sm:text-lg sm:w-7/12">
               Comprehensive marketing solutions that combine photography,
               videography, branding, and social media management to boost your
@@ -180,7 +186,7 @@ function LandingPage() {
         </div>
 
         <div>
-          
+
         </div>
       </div>
       <Footer />
