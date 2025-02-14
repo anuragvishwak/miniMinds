@@ -13,6 +13,7 @@ import { IoVideocam } from "react-icons/io5";
 import { PiFilmSlate } from "react-icons/pi";
 import Footer from "./Footer";
 import BrandsServed from "./BrandsServed";
+import Content2 from "./Content2";
 
 function LandingPage() {
   return (
@@ -22,22 +23,22 @@ function LandingPage() {
       <div>
         <div className="flex items-center py-10 px-8 sm:px-14 bg-gradient-to-r from-white to-[#fcf9f6]">
           <div className="">
-         <div className="flex ">
-          <div>
-          <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
-              Grow your Business
-            </p>
-         <div className="flex items-center">
-              <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
-                with
-              </p>
-              <p className="font-bold ml-6 text-[#e4b18c] text-2xl sm:text-8xl">
-                Mini Minds
-              </p>
+            <div className="flex ">
+              <div>
+                <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
+                  Grow your Business
+                </p>
+                <div className="flex items-center">
+                  <p className="font-bold text-[#333333] text-2xl sm:text-7xl">
+                    with
+                  </p>
+                  <p className="font-bold ml-6 text-[#e4b18c] text-2xl sm:text-8xl">
+                    Mini Minds
+                  </p>
+                </div>
+              </div>
+              <img src={img2} className="sm:hidden h-24 w-24 ml-5" />
             </div>
-          </div>
-            <img src={img2} className="sm:hidden h-24 w-24 ml-5" />
-         </div>
 
             <p className="text-[#333333] mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-justify sm:text-lg sm:w-7/12">
               Comprehensive marketing solutions that combine photography,
@@ -170,6 +171,10 @@ function LandingPage() {
         </div>
 
         <div>
+          <Content2 />
+        </div>
+
+        <div className="my-28">
           <div className="flex justify-center items-center ">
             <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
               Brands we
@@ -178,15 +183,11 @@ function LandingPage() {
               Served
             </p>
           </div>
-          <p className="text-[#333333] text-center text-lg font-dmSans">
+          <p className="text-[#333333] my-4 sm:my-8 text-center text-lg font-dmSans">
             Empowering Brands, Amplifying Success: Testimonials from the Brands
             We’ve Served
           </p>
           <BrandsServed />
-        </div>
-
-        <div>
-
         </div>
       </div>
       <Footer />

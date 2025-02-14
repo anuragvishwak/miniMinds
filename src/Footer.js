@@ -2,7 +2,6 @@ import React from "react";
 import img1 from "./1.png";
 import { PiInstagramLogo, PiYoutubeLogo } from "react-icons/pi";
 import { MdFacebook, MdPhone } from "react-icons/md";
-import { Phone, Youtube } from "lucide";
 import { GoLocation, GoMail } from "react-icons/go";
 
 function Footer() {

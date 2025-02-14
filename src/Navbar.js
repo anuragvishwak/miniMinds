@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className="flex items-center justify-between px-7 py-3">
       <img src={img1} className="h-16 w-24" />
-      <div className="w-96 hidden  font-semibold font-dmSans  sm:flex justify-between">
+      <div className="w-80 hidden  font-semibold font-dmSans  sm:flex justify-between">
         <button
           onClick={() => {
             Navigation("/");
@@ -26,18 +26,7 @@ function Navbar() {
         >
           Home
         </button>
-        <button
-          className={`${
-            currentLocation.pathname === "/Service"
-              ? "text-[#e4b18c]"
-              : "text-[#333333]"
-          }`}
-          onClick={() => {
-            Navigation("/Service");
-          }}
-        >
-          Services
-        </button>
+      
         
         <button
           className={`${
@@ -94,20 +83,7 @@ function Navbar() {
            Home
          </button>
         </div>
-        <div>
-        <button
-           className={`${
-             currentLocation.pathname === "/Service"
-               ? "text-[#e4b18c]"
-               : "text-[#333333]"
-           }`}
-           onClick={() => {
-             Navigation("/Service");
-           }}
-         >
-           Services
-         </button>
-        </div>
+     
          
        <div>
        <button

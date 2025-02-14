@@ -37,7 +37,7 @@ const BrandsServed = () => {
   };
 
   return (
-    <div className='p-10'>
+    <div className=''>
       <Slider {...settings}>
         {images.map((img, index) => (
           <div key={index} className="carousel-item">
