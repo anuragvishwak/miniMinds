@@ -3,12 +3,14 @@ import img1 from "./Miniminds Logo.pdf.png";
 import { PiHamburger } from "react-icons/pi";
 import { FaBars } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
+import TalkToUs from "./TalkToUs";
 
 function Navbar() {
   const [openNavbar, setopenNavbar] = useState(false);
   const Navigation = useNavigate();
   const currentLocation = useLocation();
   console.log(currentLocation);
+  const [openingTalkToUs, setopeningTalkToUs] = useState(false);
 
   return (
     <div className="flex items-center justify-between px-7 py-3">
@@ -62,10 +64,14 @@ function Navbar() {
         </button>
 
       
-        <button className="bg-[#333333] text-white font-semibold font-dmSans px-5 py-1.5 rounded">
+        <button 
+        onClick={() => setopeningTalkToUs(true)}
+        className="bg-[#333333] text-white font-semibold font-dmSans px-5 py-1.5 rounded">
           Talk to Us
         </button>
       </div>
+
+      {openingTalkToUs &&  <TalkToUs setopeningTalkToUs = {setopeningTalkToUs}/>}
 
       {openNavbar && (
          <div className="fixed bg-white p-5 rounded-xl shadow-xl z-50 top-20 right-5 font-semibold font-dmSans">

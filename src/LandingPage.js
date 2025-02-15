@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "./Navbar";
 import { GoArrowDownRight } from "react-icons/go";
 import img2 from "./display image.png";
@@ -14,8 +14,13 @@ import { PiFilmSlate } from "react-icons/pi";
 import Footer from "./Footer";
 import BrandsServed from "./BrandsServed";
 import Content2 from "./Content2";
+import { useNavigate } from "react-router-dom";
+
 
 function LandingPage() {
+  const navigation = useNavigate();
+  const sectionRef = useRef(null);
+
   return (
     <div>
       <Navbar />
@@ -48,13 +53,21 @@ function LandingPage() {
 
             <div className="flex space-x-5">
               <button className="hover:bg-[#333333] text-[#333333] border border-[#333333] hover:text-white font-semibold font-dmSans px-5 py-1.5 rounded">
-                <div className="flex items-center">
+                <div
+                  onClick={() => navigation("/AboutUs")}
+                  className="flex items-center"
+                >
                   Learn More
                   <IoArrowForwardSharp className="ml-1 mt-1" />
                 </div>
               </button>
               <button className="bg-[#333333] text-white font-semibold font-dmSans px-5 py-1.5 rounded">
-                <div className="flex items-center">
+                <div
+                  onClick={() => {
+                    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="flex items-center"
+                >
                   Explore
                   <GoArrowDownRight className="ml-1 mt-1" />
                 </div>
@@ -67,7 +80,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="px-10 py-10 sm:py-28">
+        <div ref={sectionRef} className="px-10 py-10 sm:py-28">
           <div className="text-center">
             <div className="flex justify-center items-center">
               <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
