@@ -16,7 +16,7 @@ function AboutUs() {
       <div>
         <Navbar />
       </div>
-      <div className="mt-10 sm:mt-0">
+      <div className="py-28 sm:mt-0">
         <div className="">
           <div className="text-center">
             <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
