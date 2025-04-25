@@ -22,11 +22,13 @@ function LandingPage() {
   const sectionRef = useRef(null);
 
   return (
-    <div>
-      <Navbar />
+    <div className="h-screen">
+   <div>
+   <Navbar />
+   </div>
 
-      <div>
-        <div className="flex items-center py-10 px-8 sm:px-14 bg-gradient-to-r from-white to-[#fcf9f6]">
+      <div className="">
+        <div className="flex items-center pt-28 pb-20 px-8 sm:px-14 bg-gradient-to-r from-white to-[#fbf4ee]">
           <div className="">
             <div className="flex ">
               <div>
@@ -42,7 +44,6 @@ function LandingPage() {
                   </p>
                 </div>
               </div>
-              <img src={img2} className="sm:hidden h-24 w-24 ml-5" />
             </div>
 
             <p className="text-[#333333] mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-justify sm:text-lg sm:w-7/12">
@@ -80,7 +81,7 @@ function LandingPage() {
           </div>
         </div>
 
-        <div ref={sectionRef} className="px-10 py-10 sm:py-28">
+        <div ref={sectionRef} className="px-10 py-10 bg-[#fbf4ee] sm:py-28">
           <div className="text-center">
             <div className="flex justify-center items-center">
               <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
@@ -98,8 +99,8 @@ function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-[#333333] gap-5">
-            <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 text-[#333333] gap-5">
+            <div className="shadow-lg bg-white rounded-2xl p-5">
               <div className="flex h-20 text-[#333333] justify-center">
                 <MdPhotoCamera
                   size={70}
@@ -121,7 +122,7 @@ function LandingPage() {
               </p>
             </div>
 
-            <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
+            <div className="bg-white shadow-lg rounded-2xl p-5">
               <div className="flex h-20 justify-center">
                 <PiFilmSlate
                   className="bg-purple-500 p-2 rounded-full text-white"
@@ -137,7 +138,7 @@ function LandingPage() {
               </p>
             </div>
 
-            <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
+            <div className="shadow-lg bg-white rounded-2xl p-5">
               <div className="flex h-20 justify-center">
                 <div className="grid gap-2 grid-cols-2">
                   <MdFacebook
@@ -167,7 +168,7 @@ function LandingPage() {
               </p>
             </div>
 
-            <div className="border shadow-lg border-[#333333] rounded-2xl p-5">
+            <div className="shadow-lg bg-white rounded-2xl p-5">
               <div className="flex h-20 justify-center">
                 <p className="text-5xl bg-yellow-500 text-white py-3 px-7 rounded-full font-bold">
                   B
