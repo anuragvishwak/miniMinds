@@ -7,7 +7,7 @@ import Admin from "./Admin";
 
 function App() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden ">
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -17,7 +17,7 @@ function App() {
           <Route path="/Admin" element={<Admin />} />
         </Routes>
       </Router>
-    </div>
+    </div>  
   );
 }
 

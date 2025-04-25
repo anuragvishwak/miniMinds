@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 function ContactUs() {
   return (
-    <div>
+    <div className="w-screen">
       <div>
         <Navbar />
       </div>

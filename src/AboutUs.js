@@ -12,7 +12,7 @@ import img5 from "./member5.jpg";
 
 function AboutUs() {
   return (
-    <div>
+    <div className="w-screen">
       <div>
         <Navbar />
       </div>

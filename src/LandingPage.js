@@ -22,7 +22,7 @@ function LandingPage() {
   const sectionRef = useRef(null);
 
   return (
-    <div className="h-screen">
+    <div className="h-screen w-screen">
    <div>
    <Navbar />
    </div>
