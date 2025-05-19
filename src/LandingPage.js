@@ -26,7 +26,10 @@ function LandingPage() {
   const sectionRef = useRef(null);
   const controls = useAnimation();
   const elevateRef = useRef(null);
+  const headingRef = useRef(null);
+
   const isInView = useInView(elevateRef, { once: false, margin: "-100px" });
+  const headingInView = useInView(headingRef, { once: false, margin: "-100px" });
 
   useEffect(() => {
     if (isInView) {
@@ -42,7 +45,12 @@ function LandingPage() {
 
       <div className="bg-black">
         <div className="py-16 sm:py-28 bg-black">
-          <div className="flex mt-10 justify-center items-center">
+          <motion.div 
+           ref={headingRef}
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2 }}
+          className="flex mt-40 justify-center items-center">
             <div>
               <p className="font-bold text-white text-2xl sm:text-7xl">
                 Grow your Business
@@ -56,17 +64,27 @@ function LandingPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center items-center">
+          <motion.div 
+           ref={elevateRef}
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2 }}
+          className="flex justify-center items-center">
             <p className="text-white mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-center sm:text-lg sm:w-7/12">
               Comprehensive marketing solutions that combine photography,
               videography, branding, and social media management to boost your
               brand, engage your audience, and deliver impactful results.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center space-x-5">
+          <motion.div 
+           ref={elevateRef}
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.2 }}
+          className="flex justify-center space-x-5">
             <button className="hover:bg-white text-white border border-white hover:text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
               <div
                 onClick={() => navigation("/AboutUs")}
@@ -87,15 +105,15 @@ function LandingPage() {
                 <GoArrowDownRight className="ml-1 mt-1" />
               </div>
             </button>
-          </div>
+          </motion.div>
         </div>
 
         <div ref={sectionRef} className="p-5 sm:p-10 bg-[#333333] sm:py-28">
           <motion.div
             ref={elevateRef}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1.2 }}
             className="text-center"
           >
             <div className="flex justify-center items-center">
