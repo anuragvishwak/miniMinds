@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "./Navbar";
 import { GoArrowDownRight } from "react-icons/go";
 import img2 from "./display image.png";
@@ -21,14 +21,17 @@ import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 function LandingPage() {
+  const [subtextCount, setSubtextCount] = useState(0);
   const navigation = useNavigate();
 
   const sectionRef = useRef(null);
   const controls = useAnimation();
   const elevateRef = useRef(null);
   const headingRef = useRef(null);
+  const subtextRef = useRef(null);
 
   const isInView = useInView(elevateRef, { once: false, margin: "-100px" });
+  const subtextInView = useInView(subtextRef, { once: true, margin: "-100px" });
   const headingInView = useInView(headingRef, { once: false, margin: "-100px" });
 
   useEffect(() => {
@@ -37,6 +40,12 @@ function LandingPage() {
     }
   }, [isInView, controls]);
 
+useEffect(() => {
+  if (subtextInView && subtextCount < 2) {
+    setSubtextCount((prev) => prev + 1);
+  }
+}, [subtextInView]);
+
   return (
     <div className="h-screen  w-screen">
       <div>
@@ -44,13 +53,13 @@ function LandingPage() {
       </div>
 
       <div className="bg-black">
-        <div className="py-16 sm:py-28 bg-black">
+        <div className="py-16 sm:py-40 bg-black">
           <motion.div 
            ref={headingRef}
             initial={{ opacity: 0, y: 60 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
-          className="flex mt-40 justify-center items-center">
+          className="flex mt-20 justify-center items-center">
             <div>
               <p className="font-bold text-white text-2xl sm:text-7xl">
                 Grow your Business
@@ -67,9 +76,9 @@ function LandingPage() {
           </motion.div>
 
           <motion.div 
-           ref={elevateRef}
+           ref={subtextRef}
             initial={{ opacity: 0, y: 60 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={subtextInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
           className="flex justify-center items-center">
             <p className="text-white mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-center sm:text-lg sm:w-7/12">
