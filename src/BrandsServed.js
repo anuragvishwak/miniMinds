@@ -40,8 +40,8 @@ const BrandsServed = () => {
     <div className=''>
       <Slider {...settings}>
         {images.map((img, index) => (
-          <div key={index} className="carousel-item">
-            <img src={img} alt={`Brand ${index + 1}`} className="h-44 w-48" />
+          <div key={index} className="carousel-item ">
+            <img src={img} alt={`Brand ${index + 1}`} className="h-44  w-48" />
           </div>
         ))}
       </Slider>

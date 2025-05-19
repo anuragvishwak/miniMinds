@@ -15,9 +15,9 @@ function Footer() {
         <div className="flex items-center">
           <input
             placeholder="example@gmail.com"
-            className="bg-[#333333] border p-1 mr-3 rounded border-[#e4b18c]"
+            className="bg-[#333333] border w-[170px] sm:w-auto p-1 mr-3 rounded border-[#e4b18c]"
           ></input>
-          <button className="bg-[#e4b18c] text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
+          <button className="bg-[#e4b18c] text-[#333333] font-semibold font-dmSans px-2.5 sm:px-5 py-1.5 rounded">
             Reach Us !
           </button>
         </div>

@@ -12,21 +12,21 @@ import img5 from "./member5.jpg";
 
 function AboutUs() {
   return (
-    <div className="w-screen">
+    <div className="bg-black w-screen">
       <div>
         <Navbar />
       </div>
-      <div className="py-28 sm:mt-0">
+      <div className="py-32 sm:mt-0">
         <div className="">
           <div className="text-center">
-            <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
+            <p className="text-white text-2xl sm:text-5xl font-bold">
               Empowering Businesses in the
             </p>
             <p className="text-[#e4b18c] text-xl sm:text-5xl font-bold">
               Digital Realm
             </p>
           </div>
-          <p className="text-justify sm:text-center my-5 px-5 sm:px-20 md:px-36 text-lg">
+          <p className="text-justify text-white sm:text-center my-5 px-5 sm:px-20 md:px-36 text-lg">
             We are a creative team focused on helping businesses thrive online.
             Specializing in photography, videography, social media management,
             content creation, and branding, we provide tailored solutions to
@@ -37,32 +37,32 @@ function AboutUs() {
         </div>
 
         <div className="my-16 sm:my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5">
-          <div className="py-1 px-4 md:text-lg flex items-center font-semibold rounded-full border border-[#333333] text-[#333333]">
+          <div className="py-2.5 px-4 flex items-center justify-center text-sm font-semibold rounded-full border border-white text-white">
             <IoLogoInstagram size={20} />
             <p className="ml-2">Social Media Management</p>
           </div>
-          <div className="py-1 px-4 md:text-lg font-semibold rounded-full border border-[#333333] flex items-center text-[#333333]">
-            <p className="border px-2  border-[#333333] rounded-full">B</p>
+          <div className="py-2.5 px-4 font-semibold rounded-full border border-white flex items-center justify-center text-white">
+            <p className="border px-2  border-white rounded-full">B</p>
             <p className="ml-2">Branding</p>
           </div>
-          <div className="py-1 px-4 flex items-center md:text-lg font-semibold rounded-full border border-[#333333] text-[#333333]">
+          <div className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-white text-white">
             <PiFilmSlate size={20} />
             <p className="ml-2">Content Creation</p>
           </div>
-          <div className="py-1 px-4 flex items-center md:text-lg font-semibold rounded-full border border-[#333333] text-[#333333]">
+          <div className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-white text-white">
             <MdPhotoCamera size={20} />
             <p className="ml-2">Photography</p>
           </div>
-          <div className="py-1 px-4 md:text-lg flex items-center font-semibold rounded-full border border-[#333333] text-[#333333]">
+          <div className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-white text-white">
             <IoVideocam size={20} />
             <p className="ml-2">Videography</p>
           </div>
         </div>
 
         <div className="flex items-center justify-center my-10">
-          <div className="sm:w-8/12 border rounded-xl m-5 p-5 border-[#e4b18c] bg-[#fffafa]">
+          <div className="sm:w-8/12 border rounded-xl m-5 p-5 border-[#e4b18c] bg-[#333333]">
             <div className="mb-3 flex items-center justify-center">
-              <p className="text-4xl font-bold text-center text-[#333333]">
+              <p className="text-4xl font-bold text-center text-white ">
                 Our{" "}
               </p>
               <p className="text-[#e4b18c] ml-3 text-4xl font-bold">
@@ -85,14 +85,14 @@ function AboutUs() {
 
         <div className="p-10 sm:p-16">
           <div className="mb-8 flex items-center  justify-center">
-            <p className="text-4xl font-bold text-center text-[#333333]">
+            <p className="text-4xl font-bold text-center text-white">
               Our{" "}
             </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
               Core Values
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 text-[#333333] gap-5 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 text-white gap-5 sm:gap-7">
             <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
               <p className="text-lg font-bold">CREATIVE & INNOVATIVE</p>
               <li>
@@ -167,7 +167,7 @@ function AboutUs() {
 
         <div>
           <div className="mb-8 flex items-center  justify-center">
-            <p className="text-4xl font-bold text-center text-[#333333]">
+            <p className="text-4xl font-bold text-center text-white">
               Our{" "}
             </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
@@ -178,14 +178,14 @@ function AboutUs() {
           <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5">
             <div className="">
               <img className="h-48 rounded-full w-48" src={img5} />
-              <p className="text-[#333333]  font-bold text-lg mt-2">
+              <p className="text-white  font-bold text-lg mt-2">
                 Roshni Vishwakarma
               </p>
               <p className="font-semibold text-gray-400">Founder & (Social Media Expert)</p>
             </div>
             <div>
               <img className="h-48 rounded-full w-48" src={img4} />
-              <p className="text-[#333333] font-bold text-lg mt-2">Jiten Jogadia</p>
+              <p className="text-white font-bold text-lg mt-2">Jiten Jogadia</p>
               <p className="font-semibold text-gray-400">
                 Founder (Social Media Expert)
               </p>
@@ -193,7 +193,7 @@ function AboutUs() {
 
             <div>
               <img className="h-48 rounded-full w-48" src={img1} />
-              <p className="text-[#333333] font-bold text-lg mt-2">Deepak Laungani</p>
+              <p className="text-white font-bold text-lg mt-2">Deepak Laungani</p>
               <p className="font-semibold text-gray-400">
                 Customer Relationship Manager (CRM)
               </p>
@@ -201,7 +201,7 @@ function AboutUs() {
 
             <div>
               <img className="h-48 rounded-full w-48" src={img2} />
-              <p className="text-[#333333] font-bold text-lg mt-2">Aron Bernard</p>
+              <p className="text-white font-bold text-lg mt-2">Aron Bernard</p>
               <p className="font-semibold text-gray-400">
                 Social Media Manager
               </p>
@@ -211,7 +211,7 @@ function AboutUs() {
 
             <div>
               <img className="h-48 rounded-full w-48" src={img3} />
-              <p className="text-[#333333] font-bold text-lg mt-2">Omkar Tambe</p>
+              <p className="text-white font-bold text-lg mt-2">Omkar Tambe</p>
               <p className="font-semibold text-gray-400">
                 Photographer & Videographer
               </p>

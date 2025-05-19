@@ -9,15 +9,15 @@ import Footer from "./Footer";
 
 function ContactUs() {
   return (
-    <div className="w-screen">
+    <div className="bg-black w-screen">
       <div>
         <Navbar />
       </div>
 
-      <div>
-       <div className="w-full flex items-center bg-[#fcf9f6] justify-center h-60">
-       <div className="flex justify-center items-center">
-              <p className="text-[#333333] text-2xl sm:text-5xl font-bold">
+      <div className="">
+       <div className="w-full flex items-center bg-black justify-center h-60">
+       <div className="mt-10 flex justify-center items-center">
+              <p className="text-white text-2xl sm:text-5xl font-bold">
                 We'd love to talk
               </p>
               <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
@@ -27,7 +27,7 @@ function ContactUs() {
        </div>
         <div className="flex justify-center">
           <div className="sm:flex items-center mt-10 mb-28 justify-between sm:w-10/12">
-            <div className="flex  bg-white w-96 border-[#333333] border p-5 items-center">
+            <div className="flex  bg-black w-96 border-white text-white border p-5 items-center">
               <FaPhone size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Phone No</p>
@@ -35,7 +35,7 @@ function ContactUs() {
               </div>
             </div>
 
-            <div className="flex bg-white w-96 border-[#333333] border p-5 items-center">
+            <div className="flex bg-black w-96 border-white text-white border p-5 items-center">
               <MdMail size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Email</p>
@@ -43,7 +43,7 @@ function ContactUs() {
               </div>
             </div>
 
-            <div className="flex bg-white w-96 sm:w-auto border-[#333333] border p-5 items-center">
+            <div className="flex bg-black w-96 sm:w-auto border-white text-white border p-5 items-center">
               <IoLocationSharp size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Address</p>

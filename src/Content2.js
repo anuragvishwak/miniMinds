@@ -7,9 +7,9 @@ import img5 from './content5.jpeg';
 
 function Content2() {
   return (
-    <div>
+    <div className="py-10">
       <div className="flex justify-center mb-5 items-center ">
-        <p className="text-[#333333] text-2xl sm:text-5xl font-bold">Work by</p>
+        <p className="text-white text-2xl sm:text-5xl font-bold">Work by</p>
         <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
           Mini Minds
         </p>
