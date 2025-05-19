@@ -59,7 +59,7 @@ useEffect(() => {
             initial={{ opacity: 0, y: 60 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
-          className="flex mt-20 justify-center items-center">
+          className="flex mt-10 sm:mt-20 justify-center items-center">
             <div>
               <p className="font-bold text-white text-2xl sm:text-7xl">
                 Grow your Business
@@ -89,9 +89,9 @@ useEffect(() => {
           </motion.div>
 
           <motion.div 
-           ref={elevateRef}
+           ref={subtextInView}
             initial={{ opacity: 0, y: 60 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={subtextInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
           className="flex justify-center space-x-5">
             <button className="hover:bg-white text-white border border-white hover:text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
