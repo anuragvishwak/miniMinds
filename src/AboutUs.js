@@ -9,24 +9,51 @@ import img2 from "./member2.jpeg";
 import img3 from "./member3.jpeg";
 import img4 from "./member4.jpeg";
 import img5 from "./member5.jpg";
+import { motion } from "framer-motion";
 
 function AboutUs() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="bg-black w-screen">
+    <div className=" w-screen">
       <div>
         <Navbar />
       </div>
       <div className="py-32 sm:mt-0">
-        <div className="">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className=""
+        >
           <div className="text-center">
-            <p className="text-white text-2xl sm:text-5xl font-bold">
+            <p className="text-2xl sm:text-5xl font-bold">
               Empowering Businesses in the
             </p>
             <p className="text-[#e4b18c] text-xl sm:text-5xl font-bold">
               Digital Realm
             </p>
           </div>
-          <p className="text-justify text-white sm:text-center my-5 px-5 sm:px-20 md:px-36 text-lg">
+          <p className="text-justify  sm:text-center my-5 px-5 sm:px-20 md:px-36 text-lg">
             We are a creative team focused on helping businesses thrive online.
             Specializing in photography, videography, social media management,
             content creation, and branding, we provide tailored solutions to
@@ -34,42 +61,69 @@ function AboutUs() {
             help you tell your brand’s story and make an impact in the digital
             world.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="my-16 sm:my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5">
-          <div className="py-2.5 px-4 flex items-center justify-center text-sm font-semibold rounded-full border border-white text-white">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+          className="my-16 sm:my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5"
+        >
+          <motion.div
+            variants={item}
+            className="py-2.5 px-4 flex items-center justify-center text-sm font-semibold rounded-full border border-black"
+          >
             <IoLogoInstagram size={20} />
             <p className="ml-2">Social Media Management</p>
-          </div>
-          <div className="py-2.5 px-4 font-semibold rounded-full border border-white flex items-center justify-center text-white">
-            <p className="border px-2  border-white rounded-full">B</p>
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="py-2.5 px-4 font-semibold rounded-full border border-black flex items-center justify-center"
+          >
+            <p className="border px-2 border-black rounded-full">B</p>
             <p className="ml-2">Branding</p>
-          </div>
-          <div className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-white text-white">
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-black"
+          >
             <PiFilmSlate size={20} />
             <p className="ml-2">Content Creation</p>
-          </div>
-          <div className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-white text-white">
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-black"
+          >
             <MdPhotoCamera size={20} />
             <p className="ml-2">Photography</p>
-          </div>
-          <div className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-white text-white">
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-black"
+          >
             <IoVideocam size={20} />
             <p className="ml-2">Videography</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="flex items-center justify-center my-10">
-          <div className="sm:w-8/12 border rounded-xl m-5 p-5 border-[#e4b18c] bg-[#333333]">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex items-center justify-center my-10"
+        >
+          <div className="sm:w-8/12 border rounded-xl m-5 p-5 border-[#e4b18c]">
             <div className="mb-3 flex items-center justify-center">
-              <p className="text-4xl font-bold text-center text-white ">
-                Our{" "}
-              </p>
-              <p className="text-[#e4b18c] ml-3 text-4xl font-bold">
-                Mission
-              </p>
+              <p className="text-4xl font-bold text-center ">Our </p>
+              <p className="text-[#e4b18c] ml-3 text-4xl font-bold">Mission</p>
             </div>
-            <p className="text-[#e4b18c] text-lg text-justify">
+            <p className="text-lg text-justify">
               In <strong className="mr-2">Mini Minds,</strong>
               Our mission is to empower businesses by providing innovative
               digital marketing solutions that drive growth and enhance brand
@@ -81,142 +135,131 @@ function AboutUs() {
               landscape.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         <div className="p-10 sm:p-16">
           <div className="mb-8 flex items-center  justify-center">
-            <p className="text-4xl font-bold text-center text-white">
-              Our{" "}
-            </p>
+            <p className="text-4xl font-bold text-center text-white">Our </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
               Core Values
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 text-white gap-5 sm:gap-7">
-            <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
-              <p className="text-lg font-bold">CREATIVE & INNOVATIVE</p>
-              <li>
-                Emphasize the importance of thinking outside the box to deliver
-                unique and impactful solutions for clients.
-              </li>
-              <li>
-                Showcase your ability to stay ahead of trends in photography,
-                videography, and digital marketing.
-              </li>
-            </div>
-
-            <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
-              <p className="text-lg font-bold">CLIENT-CETRIC APPROACH</p>
-              <li>
-                Prioritize understanding client needs and delivering tailored
-                solutions.
-              </li>
-              <li>
-                Focus on building long-term relationships and exceeding client
-                expectations.
-              </li>
-            </div>
-
-            <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
-              <p className="text-lg font-bold">QUALITY & EXCELLENCE</p>
-              <li>
-                Commit to delivering high-quality work in every project, whether
-                it’s a photo shoot, video production, or social media campaign.
-              </li>
-              <li>
-                Strive for perfection in every detail, from content creation to
-                branding.
-              </li>
-            </div>
-
-            <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
-              <p className="text-lg font-bold">TRANSPARENCY & INTEGRITY</p>
-              <li>
-                Build trust by being honest, ethical, and transparent in all
-                dealings.
-              </li>
-              <li>
-                Clearly communicate processes, pricing, and results to clients.
-              </li>
-            </div>
-
-            <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
-              <p className="text-lg font-bold">COLLABORATION & TEAMWORK</p>
-              <li>
-                Highlight the importance of working together as a team and with
-                clients to achieve the best results.
-              </li>
-              <li>
-                Foster a culture of collaboration among photographers,
-                videographers, content creators, and strategists.
-              </li>
-            </div>
-
-            <div className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]">
-              <p className="text-lg font-bold">STORYTELLING and AUTHENTICITY</p>
-              <li>
-                Focus on creating authentic, compelling stories through
-                photography, videography, and branding.
-              </li>
-              <li>
-                Help clients connect with their audience on a deeper level.
-              </li>
-            </div>
-          </div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-7"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            {[
+              {
+                title: "CREATIVE & INNOVATIVE",
+                points: [
+                  "Emphasize the importance of thinking outside the box to deliver unique and impactful solutions for clients.",
+                  "Showcase your ability to stay ahead of trends in photography, videography, and digital marketing.",
+                ],
+              },
+              {
+                title: "CLIENT-CENTRIC APPROACH",
+                points: [
+                  "Prioritize understanding client needs and delivering tailored solutions.",
+                  "Focus on building long-term relationships and exceeding client expectations.",
+                ],
+              },
+              {
+                title: "QUALITY & EXCELLENCE",
+                points: [
+                  "Commit to delivering high-quality work in every project, whether it’s a photo shoot, video production, or social media campaign.",
+                  "Strive for perfection in every detail, from content creation to branding.",
+                ],
+              },
+              {
+                title: "TRANSPARENCY & INTEGRITY",
+                points: [
+                  "Build trust by being honest, ethical, and transparent in all dealings.",
+                  "Clearly communicate processes, pricing, and results to clients.",
+                ],
+              },
+              {
+                title: "COLLABORATION & TEAMWORK",
+                points: [
+                  "Highlight the importance of working together as a team and with clients to achieve the best results.",
+                  "Foster a culture of collaboration among photographers, videographers, content creators, and strategists.",
+                ],
+              },
+              {
+                title: "STORYTELLING and AUTHENTICITY",
+                points: [
+                  "Focus on creating authentic, compelling stories through photography, videography, and branding.",
+                  "Help clients connect with their audience on a deeper level.",
+                ],
+              },
+            ].map(({ title, points }, i) => (
+              <motion.div
+                key={i}
+                variants={item}
+                className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]"
+              >
+                <p className="text-lg font-bold mb-2">{title}</p>
+                <ul className="list-disc ml-5 space-y-1 text-sm">
+                  {points.map((pt, idx) => (
+                    <li key={idx}>{pt}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
         <div>
           <div className="mb-8 flex items-center  justify-center">
-            <p className="text-4xl font-bold text-center text-white">
-              Our{" "}
-            </p>
+            <p className="text-4xl font-bold text-center">Our </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
               Team
             </p>
           </div>
 
-          <div className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5">
-            <div className="">
-              <img className="h-48 rounded-full w-48" src={img5} />
-              <p className="text-white  font-bold text-lg mt-2">
-                Roshni Vishwakarma
-              </p>
-              <p className="font-semibold text-gray-400">Founder & (Social Media Expert)</p>
-            </div>
-            <div>
-              <img className="h-48 rounded-full w-48" src={img4} />
-              <p className="text-white font-bold text-lg mt-2">Jiten Jogadia</p>
-              <p className="font-semibold text-gray-400">
-                Founder (Social Media Expert)
-              </p>
-            </div>
-
-            <div>
-              <img className="h-48 rounded-full w-48" src={img1} />
-              <p className="text-white font-bold text-lg mt-2">Deepak Laungani</p>
-              <p className="font-semibold text-gray-400">
-                Customer Relationship Manager (CRM)
-              </p>
-            </div>
-
-            <div>
-              <img className="h-48 rounded-full w-48" src={img2} />
-              <p className="text-white font-bold text-lg mt-2">Aron Bernard</p>
-              <p className="font-semibold text-gray-400">
-                Social Media Manager
-              </p>
-            </div>
-
-           
-
-            <div>
-              <img className="h-48 rounded-full w-48" src={img3} />
-              <p className="text-white font-bold text-lg mt-2">Omkar Tambe</p>
-              <p className="font-semibold text-gray-400">
-                Photographer & Videographer
-              </p>
-            </div>
-          </div>
+          <motion.div
+            className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            {[
+              {
+                img: img5,
+                name: "Roshni Vishwakarma",
+                role: "Founder & (Social Media Expert)",
+              },
+              {
+                img: img4,
+                name: "Jiten Jogadia",
+                role: "Founder (Social Media Expert)",
+              },
+              {
+                img: img1,
+                name: "Deepak Laungani",
+                role: "Customer Relationship Manager (CRM)",
+              },
+              {
+                img: img2,
+                name: "Aron Bernard",
+                role: "Social Media Manager",
+              },
+              {
+                img: img3,
+                name: "Omkar Tambe",
+                role: "Photographer & Videographer",
+              },
+            ].map(({ img, name, role }, idx) => (
+              <motion.div key={idx} variants={item} className="text-center">
+                <img className="h-48 rounded-full w-48 mx-auto" src={img} />
+                <p className="text-white font-bold text-lg mt-2">{name}</p>
+                <p className="font-semibold text-gray-400">{role}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
       <Footer />

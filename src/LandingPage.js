@@ -32,7 +32,10 @@ function LandingPage() {
 
   const isInView = useInView(elevateRef, { once: false, margin: "-100px" });
   const subtextInView = useInView(subtextRef, { once: true, margin: "-100px" });
-  const headingInView = useInView(headingRef, { once: false, margin: "-100px" });
+  const headingInView = useInView(headingRef, {
+    once: false,
+    margin: "-100px",
+  });
 
   useEffect(() => {
     if (isInView) {
@@ -40,11 +43,31 @@ function LandingPage() {
     }
   }, [isInView, controls]);
 
-useEffect(() => {
-  if (subtextInView && subtextCount < 2) {
-    setSubtextCount((prev) => prev + 1);
-  }
-}, [subtextInView]);
+  useEffect(() => {
+    if (subtextInView && subtextCount < 2) {
+      setSubtextCount((prev) => prev + 1);
+    }
+  }, [subtextInView]);
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: 60 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   return (
     <div className="h-screen  w-screen">
@@ -52,22 +75,21 @@ useEffect(() => {
         <Navbar />
       </div>
 
-      <div className="bg-black">
-        <div className="py-16 sm:py-40 bg-black">
-          <motion.div 
-           ref={headingRef}
+      <div className="">
+        <div className="py-16 sm:py-40">
+          <motion.div
+            ref={headingRef}
             initial={{ opacity: 0, y: 60 }}
             animate={headingInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
-          className="flex mt-10 sm:mt-20 justify-center items-center">
+            className="flex mt-10 sm:mt-20 justify-center items-center"
+          >
             <div>
-              <p className="font-bold text-white text-2xl sm:text-7xl">
-                Grow your Business
+              <p className="font-bold  text-2xl sm:text-7xl">
+                Elevate Your Elegance
               </p>
               <div className="flex items-center">
-                <p className="font-bold text-white text-2xl sm:text-7xl">
-                  with
-                </p>
+                <p className="font-bold  text-2xl sm:text-7xl">with</p>
                 <p className="font-bold ml-6 text-[#e4b18c] text-2xl sm:text-8xl">
                   Mini Minds
                 </p>
@@ -75,26 +97,28 @@ useEffect(() => {
             </div>
           </motion.div>
 
-          <motion.div 
-           ref={subtextRef}
+          <motion.div
+            ref={subtextRef}
             initial={{ opacity: 0, y: 60 }}
             animate={subtextInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
-          className="flex justify-center items-center">
-            <p className="text-white mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-center sm:text-lg sm:w-7/12">
+            className="flex justify-center items-center"
+          >
+            <p className=" mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-center sm:text-lg sm:w-7/12">
               Comprehensive marketing solutions that combine photography,
               videography, branding, and social media management to boost your
               brand, engage your audience, and deliver impactful results.
             </p>
           </motion.div>
 
-          <motion.div 
-           ref={subtextInView}
+          <motion.div
+            ref={subtextInView}
             initial={{ opacity: 0, y: 60 }}
             animate={subtextInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.2 }}
-          className="flex justify-center space-x-5">
-            <button className="hover:bg-white text-white border border-white hover:text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
+            className="flex justify-center space-x-5"
+          >
+            <button className="hover:bg-white  border border-[#333333] hover:text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
               <div
                 onClick={() => navigation("/AboutUs")}
                 className="flex items-center"
@@ -103,7 +127,7 @@ useEffect(() => {
                 <IoArrowForwardSharp className="ml-1 mt-1" />
               </div>
             </button>
-            <button className="bg-white text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
+            <button className="bg-black text-white font-semibold font-dmSans px-5 py-1.5 rounded">
               <div
                 onClick={() => {
                   sectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -117,7 +141,7 @@ useEffect(() => {
           </motion.div>
         </div>
 
-        <div ref={sectionRef} className="p-5 sm:p-10 bg-[#333333] sm:py-28">
+        <div ref={sectionRef} className="p-5 sm:p-10 sm:py-28">
           <motion.div
             ref={elevateRef}
             initial={{ opacity: 0, y: 60 }}
@@ -126,15 +150,13 @@ useEffect(() => {
             className="text-center"
           >
             <div className="flex justify-center items-center">
-              <p className="text-white text-2xl sm:text-5xl font-bold">
-                Elevate Your
-              </p>
+              <p className=" text-2xl sm:text-5xl font-bold">Elevate Your</p>
               <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
                 Brand
               </p>
             </div>
 
-            <p className="text-white  my-4 sm:my-8 sm:text-lg font-dmSans ">
+            <p className="  my-4 sm:my-8 sm:text-lg font-dmSans ">
               We are a dynamic, full-service marketing company that thrives on
               delivering innovative solutions tailored to your brand's unique
               needs.
@@ -143,20 +165,23 @@ useEffect(() => {
 
           <motion.div
             ref={elevateRef}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            variants={container}
+            initial="hidden"
+            animate={isInView ? "show" : "hidden"}
             className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 text-[#333333] gap-5"
           >
-            <div className="shadow-lg bg-black rounded-2xl p-5">
-              <div className="flex h-20 text-white justify-center">
+            <motion.div
+              variants={item}
+              className="shadow-lg bg-black rounded-2xl p-5"
+            >
+              <div className="flex h-20  justify-center">
                 <MdPhotoCamera
                   size={70}
-                  className="bg-red-500 p-2 rounded-l-full text-white"
+                  className="bg-red-500 p-2 rounded-l-full "
                 />
                 <IoVideocam
                   size={70}
-                  className="bg-blue-500 p-2 rounded-r-full text-white"
+                  className="bg-blue-500 p-2 rounded-r-full "
                 />
               </div>
               <p className=" font-bold text-white mt-3 text-xl">
@@ -168,9 +193,12 @@ useEffect(() => {
                 from product shots to brand films and social media clips. Let’s
                 craft visuals that captivate and leave a lasting impression.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-black shadow-lg rounded-2xl p-5">
+            <motion.div
+              variants={item}
+              className="bg-black shadow-lg rounded-2xl p-5"
+            >
               <div className="flex h-20 justify-center">
                 <PiFilmSlate
                   className="bg-purple-500 p-2 rounded-full text-white"
@@ -186,9 +214,12 @@ useEffect(() => {
                 online presence and sparks conversation. Let’s bring your
                 brand’s story to life.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="shadow-lg bg-black rounded-2xl p-5">
+            <motion.div
+              variants={item}
+              className="shadow-lg bg-black rounded-2xl p-5"
+            >
               <div className="flex h-20 justify-center">
                 <div className="grid gap-2 grid-cols-2">
                   <MdFacebook
@@ -218,9 +249,12 @@ useEffect(() => {
                 engaging content and effective campaigns that drive results.
                 Let’s make your brand unforgettable online.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="shadow-lg bg-black rounded-2xl p-5">
+            <motion.div
+              variants={item}
+              className="shadow-lg bg-black rounded-2xl p-5"
+            >
               <div className="flex h-20 justify-center">
                 <p className="text-5xl bg-yellow-500 text-white py-3 px-7 rounded-full font-bold">
                   B
@@ -232,7 +266,7 @@ useEffect(() => {
                 turn your vision into a standout brand with unique designs and
                 strategies that leave a lasting impression.
               </p>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
@@ -242,9 +276,7 @@ useEffect(() => {
 
         <div className="py-18">
           <div className="flex justify-center items-center ">
-            <p className="text-white text-2xl sm:text-5xl font-bold">
-              Brands we
-            </p>
+            <p className="text-2xl sm:text-5xl font-bold">Brands we</p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
               Served
             </p>

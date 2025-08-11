@@ -38,7 +38,7 @@ function Navbar() {
               className={`${
                 currentLocation.pathname === "/"
                   ? "text-[#e4b18c]"
-                  : "text-white"
+                  : ""
               }`}
             >
               Home
@@ -48,7 +48,7 @@ function Navbar() {
               className={`${
                 currentLocation.pathname === "/AboutUs"
                   ? "text-[#e4b18c]"
-                  : "text-white"
+                  : ""
               }`}
               onClick={() => {
                 Navigation("/AboutUs");
@@ -60,7 +60,7 @@ function Navbar() {
               className={`${
                 currentLocation.pathname === "/ContactUs"
                   ? "text-[#e4b18c]"
-                  : "text-white"
+                  : ""
               }`}
               onClick={() => {
                 Navigation("/ContactUs");
@@ -73,7 +73,7 @@ function Navbar() {
           <div className="flex items-center">
             <button
               onClick={() => setopeningTalkToUs(true)}
-              className="bg-[#333333] text-white font-semibold text-sm sm:text-base font-dmSans px-5 py-1.5 rounded-full"
+              className="bg-black text-white font-semibold text-sm sm:text-base font-dmSans px-5 py-1.5 rounded-full"
             >
               Talk to Us
             </button>
