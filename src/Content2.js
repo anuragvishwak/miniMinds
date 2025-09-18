@@ -5,6 +5,7 @@ import img2 from "./content2.jpeg";
 import img3 from "./content3.jpeg";
 import img4 from "./content4.jpeg";
 import img5 from "./content5.jpeg";
+import sampleVideo from "./Sample content video.mp4";
 
 function Content2() {
   const container = {
@@ -27,6 +28,15 @@ function Content2() {
     },
   };
 
+  const content = [
+    { type: "img", src: img1 },
+    { type: "img", src: img2 },
+    { type: "video", src: sampleVideo },
+    { type: "img", src: img3 },
+    { type: "img", src: img4 },
+    { type: "img", src: img5 },
+  ];
+
   return (
     <div className="py-10">
       <div className="flex justify-center mb-5 items-center">
@@ -42,17 +52,32 @@ function Content2() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-5 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-5"
         >
-          {[img1, img2, img3, img4, img5].map((img, index) => (
-            <motion.img
-              key={index}
-              variants={item}
-              src={img}
-              className="h-96 w-80 object-cover"
-              alt={`work-${index}`}
-            />
-          ))}
+          {content.map((itemData, index) =>
+            itemData.type === "img" ? (
+              <motion.img
+                key={index}
+                variants={item}
+                src={itemData.src}
+                className="h-[500px] w-full object-cover rounded-lg"
+                alt={`work-${index}`}
+              />
+            ) : (
+              <motion.video
+                key={index}
+                variants={item}
+                autoPlay
+                 loop
+                 muted
+                // playsInline
+                className="h-[500px] w-full object-cover rounded-lg"
+              >
+                <source src={itemData.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </motion.video>
+            )
+          )}
         </motion.div>
       </div>
     </div>

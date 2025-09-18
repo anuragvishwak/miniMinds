@@ -70,7 +70,7 @@ function LandingPage() {
   };
 
   return (
-    <div className="h-screen  w-screen">
+    <div className="h-full min-h-screen bg-[#fffaf6]  w-screen">
       <div>
         <Navbar />
       </div>
@@ -274,14 +274,14 @@ function LandingPage() {
           <Content2 />
         </div>
 
-        <div className="py-18">
+        <div className="">
           <div className="flex justify-center items-center ">
             <p className="text-2xl sm:text-5xl font-bold">Brands we</p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
               Served
             </p>
           </div>
-          <p className="text-white my-4 sm:my-8 text-center text-lg font-dmSans">
+          <p className="text-black my-4 sm:my-5 text-center text-lg font-dmSans">
             Empowering Brands, Amplifying Success: Testimonials from the Brands
             We’ve Served
           </p>

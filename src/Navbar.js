@@ -14,7 +14,7 @@ function Navbar() {
   const [openingTalkToUs, setopeningTalkToUs] = useState(false);
 
   return (
-    <div className="fixed opacity-90 w-screen m-3 sm:m-7 z-50">
+    <div className="fixed opacity-90  w-screen m-3 sm:m-7 z-50">
       <div className="flex sm:justify-center items-center">
         <div className="bg-white  p-2 shadow-xl sm:hidden rounded-full mr-3">
           <button
@@ -27,7 +27,7 @@ function Navbar() {
         <div
           className={`flex items-center w-56 sm:w-7/12 ${
             openNavbar === true ? "rounded-t-3xl" : "rounded-full"
-          } justify-between  sm:rounded-full  shadow-2xl bg-white backdrop-blur-md bg-white/15   px-3 py-2  `}
+          } justify-between  sm:rounded-full  shadow-2xl bg-white b   px-3 py-2  `}
         >
           <img src={img1} className="h-10" />
           <div className="w-80 hidden  font-semibold font-dmSans  sm:flex justify-between">

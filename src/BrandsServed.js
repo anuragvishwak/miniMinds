@@ -15,7 +15,6 @@ import img7 from './joyfull.png';
 const BrandsServed = () => {
   const images = [img1, img2, img3, img4, img5, img6, img7];
 
-  // Framer Motion animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -62,7 +61,7 @@ const BrandsServed = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      className="px-5 py-10 mb-20"
+      className="px-5 py-7 mb-20"
     >
       <Slider {...settings}>
         {images.map((img, index) => (
