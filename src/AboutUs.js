@@ -33,7 +33,7 @@ function AboutUs() {
   };
 
   return (
-    <div className=" w-screen">
+    <div className="h-full min-h-screen bg-[#fffaf6] w-screen">
       <div>
         <Navbar />
       </div>
@@ -72,7 +72,7 @@ function AboutUs() {
         >
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center text-sm font-semibold rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center text-sm bg-white shadow-lg font-semibold rounded-full border border-black"
           >
             <IoLogoInstagram size={20} />
             <p className="ml-2">Social Media Management</p>
@@ -80,7 +80,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 font-semibold rounded-full border border-black flex items-center justify-center"
+            className="py-2.5 px-4 font-semibold rounded-full border border-black bg-white shadow-lg flex items-center justify-center"
           >
             <p className="border px-2 border-black rounded-full">B</p>
             <p className="ml-2">Branding</p>
@@ -88,7 +88,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-white shadow-lg rounded-full border border-black"
           >
             <PiFilmSlate size={20} />
             <p className="ml-2">Content Creation</p>
@@ -96,7 +96,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-white shadow-lg rounded-full border border-black"
           >
             <MdPhotoCamera size={20} />
             <p className="ml-2">Photography</p>
@@ -104,7 +104,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center font-semibold rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-white shadow-lg rounded-full border border-black"
           >
             <IoVideocam size={20} />
             <p className="ml-2">Videography</p>
@@ -118,8 +118,8 @@ function AboutUs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center justify-center my-10"
         >
-          <div className="sm:w-8/12 border rounded-xl m-5 p-5 border-[#e4b18c]">
-            <div className="mb-3 flex items-center justify-center">
+          <div className="sm:w-10/12 border bg-white shadow-lg rounded-xl m-5 p-10 border-[#e4b18c]">
+            <div className="mb-6 flex items-center justify-center">
               <p className="text-4xl font-bold text-center ">Our </p>
               <p className="text-[#e4b18c] ml-3 text-4xl font-bold">Mission</p>
             </div>
@@ -139,13 +139,13 @@ function AboutUs() {
 
         <div className="p-10 sm:p-16">
           <div className="mb-8 flex items-center  justify-center">
-            <p className="text-4xl font-bold text-center text-white">Our </p>
+            <p className="text-4xl font-bold text-center text-black">Our </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
               Core Values
             </p>
           </div>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-7"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-7"
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -198,10 +198,10 @@ function AboutUs() {
               <motion.div
                 key={i}
                 variants={item}
-                className="border p-5 rounded-xl shadow-lg shadow-[#e4b18c]"
+                className="border-t-8 p-5 border-[#e4b18c] bg-white rounded-xl shadow-lg shadow-[#e4b18c]"
               >
-                <p className="text-lg font-bold mb-2">{title}</p>
-                <ul className="list-disc ml-5 space-y-1 text-sm">
+                <p className="text-lg font-bold text-[#e4b18c]">{title}</p>
+                <ul className="list-disc ml-5 my-5 space-y-1 text-sm">
                   {points.map((pt, idx) => (
                     <li key={idx}>{pt}</li>
                   ))}
@@ -255,7 +255,7 @@ function AboutUs() {
             ].map(({ img, name, role }, idx) => (
               <motion.div key={idx} variants={item} className="text-center">
                 <img className="h-48 rounded-full w-48 mx-auto" src={img} />
-                <p className="text-white font-bold text-lg mt-2">{name}</p>
+                <p className="text-black font-bold text-lg mt-2">{name}</p>
                 <p className="font-semibold text-gray-400">{role}</p>
               </motion.div>
             ))}

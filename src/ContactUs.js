@@ -84,15 +84,28 @@ function ContactUs() {
           </motion.div>
         </div>
 
-        <div className="">
-          <iframe
-            className="w-full"
+        <div className="mb-20 shadow-xl border border-gray-300 rounded-xl bg-black mx-20">
+          <div className="p-3">
+            <p className="text-[#e4b18c] text-xl font-bold">Find us here</p>
+            <p className="text-[#e4b18c]">
+              Visit our location at Phoenix Marketcity
+            </p>
+          </div>
+         <motion.div
+           initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+         >
+           <iframe 
+            className="w-full h-96 rounded-b-xl"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.488310742594!2d72.88626672493018!3d19.086222301652093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ced1c96aa987%3A0x34cb4a6927ca9c36!2sphoenix%20market%20City%20Mall!5e0!3m2!1sen!2sin!4v1739450514821!5m2!1sen!2sin"
             height={300}
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+         </motion.div>
         </div>
       </div>
       <Footer />
