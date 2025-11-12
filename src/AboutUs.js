@@ -33,11 +33,11 @@ function AboutUs() {
   };
 
   return (
-    <div className="h-full min-h-screen bg-[#fffaf6] w-screen">
+    <div className="h-full min-h-screen w-screen">
       <div>
         <Navbar />
       </div>
-      <div className="py-32 sm:mt-0">
+      <div className="py-24 sm:py-32 sm:mt-0">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,15 +45,17 @@ function AboutUs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className=""
         >
-          <div className="text-center">
-            <p className="text-2xl sm:text-5xl font-bold">
+          <div className="flex mx-5 sm:mx-36 space-x-3">
+            <p className="text-2xl sm:text-8xl font-semibold">ABOUT</p>
+            <p className="text-[#e4b18c] text-xl sm:text-8xl">US</p>
+          </div>
+          <div className="flex mx-5 sm:mx-36  sm:w-full space-x-3">
+            <p className="text-2xl sm:text-4xl font-bold">
               Empowering Businesses in the
-            </p>
-            <p className="text-[#e4b18c] text-xl sm:text-5xl font-bold">
-              Digital Realm
+              <span className="text-[#e4b18c]">Digital Realm</span>
             </p>
           </div>
-          <p className="text-justify  sm:text-center my-5 px-5 sm:px-20 md:px-36 text-lg">
+          <p className="text-justify  my-5 px-5 sm:px-20 md:px-36 text-lg">
             We are a creative team focused on helping businesses thrive online.
             Specializing in photography, videography, social media management,
             content creation, and branding, we provide tailored solutions to
@@ -62,7 +64,6 @@ function AboutUs() {
             world.
           </p>
         </motion.div>
-
         <motion.div
           variants={container}
           initial="hidden"
@@ -72,7 +73,7 @@ function AboutUs() {
         >
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center text-sm bg-white shadow-lg font-semibold rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center text-sm bg-whit font-semibold rounded-full border border-black"
           >
             <IoLogoInstagram size={20} />
             <p className="ml-2">Social Media Management</p>
@@ -80,7 +81,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 font-semibold rounded-full border border-black bg-white shadow-lg flex items-center justify-center"
+            className="py-2.5 px-4 font-semibold rounded-full border border-black bg-whit flex items-center justify-center"
           >
             <p className="border px-2 border-black rounded-full">B</p>
             <p className="ml-2">Branding</p>
@@ -88,7 +89,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-white shadow-lg rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-whit rounded-full border border-black"
           >
             <PiFilmSlate size={20} />
             <p className="ml-2">Content Creation</p>
@@ -96,7 +97,7 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-white shadow-lg rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-whit rounded-full border border-black"
           >
             <MdPhotoCamera size={20} />
             <p className="ml-2">Photography</p>
@@ -104,13 +105,12 @@ function AboutUs() {
 
           <motion.div
             variants={item}
-            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-white shadow-lg rounded-full border border-black"
+            className="py-2.5 px-4 flex items-center justify-center font-semibold bg-whit rounded-full border border-black"
           >
             <IoVideocam size={20} />
             <p className="ml-2">Videography</p>
           </motion.div>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,12 +118,12 @@ function AboutUs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex items-center justify-center my-10"
         >
-          <div className="sm:w-10/12 border bg-white shadow-lg rounded-xl m-5 p-10 border-[#e4b18c]">
-            <div className="mb-6 flex items-center justify-center">
-              <p className="text-4xl font-bold text-center ">Our </p>
+          <div className="w-full p-5 sm:p-10 bg-black">
+            <div className="mb-3 sm:mb-6 flex items-center justify-center">
+              <p className="text-4xl font-bold text-center text-white">Our</p>
               <p className="text-[#e4b18c] ml-3 text-4xl font-bold">Mission</p>
             </div>
-            <p className="text-lg text-justify">
+            <p className="text-lg sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-white to-[#e4b18c] text-justify">
               In <strong className="mr-2">Mini Minds,</strong>
               Our mission is to empower businesses by providing innovative
               digital marketing solutions that drive growth and enhance brand
@@ -136,8 +136,7 @@ function AboutUs() {
             </p>
           </div>
         </motion.div>
-
-        <div className="p-10 sm:p-16">
+        <div className="p-6 sm:p-16">
           <div className="mb-8 flex items-center  justify-center">
             <p className="text-4xl font-bold text-center text-black">Our </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
@@ -198,21 +197,23 @@ function AboutUs() {
               <motion.div
                 key={i}
                 variants={item}
-                className="border-t-8 p-5 border-[#e4b18c] bg-white rounded-xl shadow-lg shadow-[#e4b18c]"
+                className="border-t-8  border-black bg-white rounded-x shadow-black"
               >
-                <p className="text-lg font-bold text-[#e4b18c]">{title}</p>
-                <ul className="list-disc ml-5 my-5 space-y-1 text-sm">
-                  {points.map((pt, idx) => (
-                    <li key={idx}>{pt}</li>
-                  ))}
-                </ul>
+                <div className="border-black p-5 border">
+                  <p className="text-lg font-bold text-[#e4b18c]">{title}</p>
+                  <ul className="list-disc ml-5 my-5 space-y-1 text-sm">
+                    {points.map((pt, idx) => (
+                      <li key={idx}>{pt}</li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
-
+        /
         <div>
-          <div className="mb-8 flex items-center  justify-center">
+          <div className="flex items-center justify-center">
             <p className="text-4xl font-bold text-center">Our </p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
               Team
@@ -220,7 +221,7 @@ function AboutUs() {
           </div>
 
           <motion.div
-            className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-10 gap-5"
+            className="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -240,7 +241,7 @@ function AboutUs() {
               {
                 img: img1,
                 name: "Deepak Laungani",
-                role: "Customer Relationship Manager (CRM)",
+                role: "Customer Relationship Manager",
               },
               {
                 img: img2,
@@ -253,10 +254,23 @@ function AboutUs() {
                 role: "Photographer & Videographer",
               },
             ].map(({ img, name, role }, idx) => (
-              <motion.div key={idx} variants={item} className="text-center">
-                <img className="h-48 rounded-full w-48 mx-auto" src={img} />
-                <p className="text-black font-bold text-lg mt-2">{name}</p>
-                <p className="font-semibold text-gray-400">{role}</p>
+              <motion.div
+                key={idx}
+                variants={item}
+                className="relative overflow-hidden rounded-2xl shadow-lg group"
+              >
+                <img
+                  className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={img}
+                  alt={name}
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+
+                <div className="absolute bottom-0 left-0 right-0 bg-white rounded-xl p-3 m-2 text-center text-black">
+                  <p className="text-lg font-bold">{name}</p>
+                  <p className="text-sm text-[#e4b18c] font-semibold">{role}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
