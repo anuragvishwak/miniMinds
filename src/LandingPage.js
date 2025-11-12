@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Navbar from "./Navbar";
 import { GoArrowDownRight } from "react-icons/go";
-import img2 from "./display image.png";
+import Video from "./PixVerse_V5_Image_Text_360P_generate_a_video_i.mp4";
 import {
   IoArrowForwardSharp,
   IoLogoInstagram,
@@ -70,75 +70,63 @@ function LandingPage() {
   };
 
   return (
-    <div className="h-full min-h-screen bg-[#fffaf6]  w-screen">
+    <div className="h-full min-h-screen w-screen">
       <div>
         <Navbar />
       </div>
 
       <div className="">
-        <div className="py-16 sm:py-40">
-          <motion.div
-            ref={headingRef}
-            initial={{ opacity: 0, y: 60 }}
-            animate={headingInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.2 }}
-            className="flex mt-10 sm:mt-20 justify-center items-center"
+        <div className="relative h-screen w-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
           >
-            <div>
-              <p className="font-bold  text-2xl sm:text-7xl">
-                Elevate Your Elegance
-              </p>
-              <div className="flex items-center">
-                <p className="font-bold  text-2xl sm:text-7xl">with</p>
-                <p className="font-bold ml-6 text-[#e4b18c] text-2xl sm:text-8xl">
-                  Mini Minds
-                </p>
-              </div>
-            </div>
-          </motion.div>
+            <source src={Video} type="video/mp4" />
+          </video>
 
-          <motion.div
-            ref={subtextRef}
-            initial={{ opacity: 0, y: 60 }}
-            animate={subtextInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.2 }}
-            className="flex justify-center items-center"
-          >
-            <p className=" mb-3 text-sm sm:mb-7 mt-5 sm:mt-14 text-center sm:text-lg sm:w-7/12">
+          <div className="absolute inset-0 bg-black/40"></div>
+
+          {/* Content */}
+          <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white">
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2 }}
+            >
+              <h1 className="text-4xl sm:text-7xl font-bold">
+                Elevate Your Elegance
+              </h1>
+              <h1 className="text-4xl sm:text-7xl font-bold mt-2">
+                with <span className="text-[#e4b18c]">Mini Minds</span>
+              </h1>
+            </motion.div>
+
+            <p className="mt-6 sm:w-7/12 text-center text-sm sm:text-lg">
               Comprehensive marketing solutions that combine photography,
               videography, branding, and social media management to boost your
-              brand, engage your audience, and deliver impactful results.
+              brand.
             </p>
-          </motion.div>
 
-          <motion.div
-            ref={subtextInView}
-            initial={{ opacity: 0, y: 60 }}
-            animate={subtextInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.2 }}
-            className="flex justify-center space-x-5"
-          >
-            <button className="hover:bg-white  border border-[#333333] hover:text-[#333333] font-semibold font-dmSans px-5 py-1.5 rounded">
-              <div
+            <div className="mt-8 flex space-x-5">
+              <button
                 onClick={() => navigation("/AboutUs")}
-                className="flex items-center"
+                className="bg-white text-black px-5 py-2 rounded hover:bg-[#e4b18c]"
               >
                 Learn More
-                <IoArrowForwardSharp className="ml-1 mt-1" />
-              </div>
-            </button>
-            <button className="bg-black text-white font-semibold font-dmSans px-5 py-1.5 rounded">
-              <div
-                onClick={() => {
-                  sectionRef.current.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="flex items-center"
+              </button>
+              <button
+                onClick={() =>
+                  sectionRef.current.scrollIntoView({ behavior: "smooth" })
+                }
+                className="bg-[#e4b18c] text-white px-5 py-2 rounded"
               >
                 Explore
-                <GoArrowDownRight className="ml-1 mt-1" />
-              </div>
-            </button>
-          </motion.div>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div ref={sectionRef} className="p-5 sm:p-10 sm:py-28">

@@ -36,15 +36,15 @@ function ContactUs() {
       </div>
 
       <div className="">
-        <div className="w-full flex items-center justify-center  h-60">
+        <div className="w-full flex items-center justify-center  sm:h-60">
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-32 flex justify-center items-center"
+            className="mt-32 mb-5 sm:mb-0 flex justify-center items-center"
           >
-            <p className="text-2xl sm:text-5xl font-bold">We'd love to talk</p>
+            <p className="text-2xl sm:text-5xl  font-bold">We'd love to talk</p>
             <p className="text-[#e4b18c] ml-3 text-xl sm:text-5xl font-bold">
               to you
             </p>
@@ -56,9 +56,9 @@ function ContactUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="sm:flex items-center mt-10 mb-28 justify-between sm:w-10/12"
+            className="sm:flex items-center sm:mt-10 mb-14 sm:mb-28 justify-between sm:w-10/12"
           >
-            <div className="flex  w-96 border-black border p-5 items-center">
+            <div className="flex  w-80 sm:w-96 border-black border p-5 items-center">
               <FaPhone size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Phone No</p>
@@ -66,7 +66,7 @@ function ContactUs() {
               </div>
             </div>
 
-            <div className="flex w-96 border-black border p-5 items-center">
+            <div className="flex w-80 sm:w-96 sm:my-0 my-3 border-black border p-5 items-center">
               <MdMail size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Email</p>
@@ -74,7 +74,7 @@ function ContactUs() {
               </div>
             </div>
 
-            <div className="flex w-96 sm:w-auto border-black border p-5 items-center">
+            <div className="flex w-80 sm:w-96 border-black border p-5 items-center">
               <IoLocationSharp size={30} />
               <div className="ml-2">
                 <p className="font-semibold">Address</p>
@@ -84,9 +84,9 @@ function ContactUs() {
           </motion.div>
         </div>
 
-        <div className="mb-20 shadow-xl border border-gray-300 rounded-xl bg-black mx-20">
+        <div className="mb-14 sm:mb-20 shadow-xl border border-gray-300 rounded-xl bg-black mx-5 sm:mx-20">
           <div className="p-3">
-            <p className="text-[#e4b18c] text-xl font-bold">Find us here</p>
+            <p className="text-white text-2xl font-bold">Find us here</p>
             <p className="text-[#e4b18c]">
               Visit our location at Phoenix Marketcity
             </p>

@@ -119,9 +119,9 @@ function AboutUs() {
           className="flex items-center justify-center my-10"
         >
           <div className="w-full p-5 sm:p-10 bg-black">
-            <div className="mb-3 sm:mb-6 flex items-center justify-center">
-              <p className="text-4xl font-bold text-center text-white">Our</p>
-              <p className="text-[#e4b18c] ml-3 text-4xl font-bold">Mission</p>
+            <div className="mb-4 sm:mb-6 flex items-center justify-center">
+              <p className="text-2xl sm:text-4xl font-bold text-center text-white">Our</p>
+              <p className="text-[#e4b18c] ml-3 text-2xl sm:text-4xl font-bold">Mission</p>
             </div>
             <p className="text-lg sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-white to-[#e4b18c] text-justify">
               In <strong className="mr-2">Mini Minds,</strong>
@@ -138,8 +138,8 @@ function AboutUs() {
         </motion.div>
         <div className="p-6 sm:p-16">
           <div className="mb-8 flex items-center  justify-center">
-            <p className="text-4xl font-bold text-center text-black">Our </p>
-            <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
+            <p className="text-2xl sm:text-4xl font-bold text-center text-black">Our </p>
+            <p className="text-[#e4b18c] ml-3 text-2xl sm:text-4xl font-bold">
               Core Values
             </p>
           </div>
@@ -211,11 +211,11 @@ function AboutUs() {
             ))}
           </motion.div>
         </div>
-        /
+        
         <div>
           <div className="flex items-center justify-center">
-            <p className="text-4xl font-bold text-center">Our </p>
-            <p className="text-[#e4b18c] ml-3 text-xl sm:text-4xl font-bold">
+            <p className="text-2xl sm:text-4xl font-bold text-center">Our </p>
+            <p className="text-[#e4b18c] ml-3 text-2xl sm:text-4xl font-bold">
               Team
             </p>
           </div>

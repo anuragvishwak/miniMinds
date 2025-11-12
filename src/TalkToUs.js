@@ -5,35 +5,30 @@ import { database } from "./FirebaseConfig";
 
 
 function TalkToUs({ setopeningTalkToUs }) {
-  // State for form fields
   const [firmName, setFirmName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // Function to handle form submission and save data to Firebase
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
 
-    // Validate inputs
     if (!firmName || !phoneNo || !email || !message) {
       alert("Please fill all fields.");
       return;
     }
 
     try {
-      // Add data to Firestore
       const docRef = await addDoc(collection(database, "customer_query"), {
         firmName,
         phoneNo,
         email,
         message,
-        timestamp: new Date(), // Optionally, you can add a timestamp
+        timestamp: new Date(), 
       });
 
       console.log("Document written with ID: ", docRef.id);
 
-      // Optionally, you can close the modal after submission
       setopeningTalkToUs(false);
       alert("Your query has been submitted!");
     } catch (e) {
@@ -44,13 +39,13 @@ function TalkToUs({ setopeningTalkToUs }) {
 
   return (
     <div className="bg-black z-50 flex flex-col justify-center items-center fixed inset-0 bg-opacity-70">
-      <div className="bg-white w-96 p-5 rounded-xl shadow-xl z-50 font-semibold font-dmSans">
-        <div className="flex items-center justify-between">
-          <div className="flex mb-6 justify-center items-center ">
-            <p className="text-[#333333] text-lg sm:text-3xl font-bold">
+      <div className="bg-white w-80 sm:w-96 p-5 rounded shadow-xl z-50 font-semibold font-dmSans">
+        <div className="flex items-center mb-4 justify-between">
+          <div className="flex justify-center items-start">
+            <p className="text-[#333333] text-xl sm:text-3xl font-bold">
               Talk to
             </p>
-            <p className="text-[#e4b18c] ml-3 text-lg sm:text-3xl font-bold">
+            <p className="text-[#e4b18c] ml-2 text-lg sm:text-3xl font-bold">
               us
             </p>
           </div>
